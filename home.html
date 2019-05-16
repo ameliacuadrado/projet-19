@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/_global.css">
+    <title>Vintage lab</title>
+</head>
+<body id="home">
+<!-- Le header se retrouve sur toutes les pages -->
+<header>
+    <!-- Première section: row qui contient le logo et la zone de recherche-->
+    <section class="content col-sm-12 alignContent">
+        <div class="col-lg-6 col-md-6">
+            <img src="img/content/logo.png" class="logo"/>
+        </div>
+        <div class="col-lg-6 col-md-6 search">
+            <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
+            <input class="btnSearch" type="submit" name="submit" value="OK">
+        </div>
+
+    </section>
+    <hr/>
+    <!-- Première barre de navigation: menu principal. Pas utilisé de grille car uniquement 5 items et donc pas compatible avec une grille de 12
+     SCSS mis à part _navigation.scss-->
+    <nav class="mainNav content col-sm-12">
+        <a href="#" >Accueil</a>
+        <a href="#" >Meubles</a>
+        <a href="#" >Luminaires</a>
+        <a href="#" >Accessoires</a>
+        <a href="#" >Contact</a>
+    </nav>
+    <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
+    <section class="breadcrumb">
+        <div class="content">
+            <p>Vous êtes ici: <a href="#">Chaises</a></p>
+
+        </div>
+    </section>
+</header>
+
+<main>
+    <img src="img/slide.jpg" class="background"/>
+
+    <section class="content">
+        <section class="content col-md-9 col-lg-9">
+            <div class="col-md-12 col-lg-12">
+                <img  src="img/gazzda.jpg" />
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="img/liam-fr.jpg"/>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="img/vita-aluvia.jpg"/>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="img/showroom-360.jpg"/>
+            </div>
+        </section>
+        <section class="content col-md-3 col-lg-3">
+            <div class="col-md-12 col-lg-12">
+                <img src="img/i-shop-sundays_1.jpg"/>
+                <p>
+                    Ouvert chaque 1er dimanche du mois (12h-18)
+                </p><ul>
+                        <li>- 3 juin</li>
+                        <li>- 1er juillet</li>
+                        <li>- 5 août</li>
+                        <li>- 2 septembre</li>
+
+                    </ul>
+
+
+            </div>
+        </section>
+    </section>
+
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
