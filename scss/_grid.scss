@@ -1,0 +1,58 @@
+$numCol : 12;
+$gutter : 1rem;
+
+$view:(
+        sm : 480px,
+        md : 640px,
+        lg : 1024px
+);
+
+
+@each $key, $value in $view{
+  @media screen and (min-width: $value){
+    @if($key==sm){
+      .content {
+        flex-direction: column;
+      }
+
+      .md-hidden .lg-hidden{
+        display: none;
+      }
+      main{
+        .content {
+          section {
+            //flex-basis: calc(100% / 3 * 3);
+            margin-left: 0rem;
+
+          }
+        }
+
+
+      }
+    }@else {
+      .content {
+        flex-direction: row;
+      }
+
+      main {
+        .content {
+          section {
+            //flex-basis: calc(100% / 3 * 3);
+            margin-left: 1rem;
+
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through $numCol{
+      .col-#{$key}-#{$i}{
+        flex-basis: calc(100% / #{$numCol} *
+        #{$i} - #{$gutter});
+      }
+
+    }
+
+  }
+}
+

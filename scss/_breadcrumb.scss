@@ -1,0 +1,13 @@
+@import "partials/colors";
+.breadcrumb {
+  background: $lightblue;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  p {
+    color: $white;
+    margin-left: 0;
+    a {
+      color: $black;
+    }
+  }
+}

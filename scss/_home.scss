@@ -1,0 +1,37 @@
+#home{
+  .background{
+    width: 100%;
+    height: auto;
+    margin-top: -1rem;
+  }
+
+  .content{
+    margin: auto;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    section:last-child{
+      width: 50%;
+      height: auto;
+
+    }
+    p{
+
+      //background-color: red;
+    }
+      ul {
+        background-image: url("../img/home_page_corner.png");
+        width: 50%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-position-x:left;
+        background-position-y: bottom;
+      li {
+          list-style-type: none;
+
+        }
+      }
+
+  }
+}

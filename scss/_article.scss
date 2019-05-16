@@ -1,0 +1,47 @@
+@import "partials/colors";
+#library {
+  main {
+    .content {
+
+      section {
+        flex-basis: calc(100% / 3 * 1 - 1rem);
+        //margin-left: 1rem;
+        margin-bottom: 1rem;
+        &:hover {
+          box-shadow: 2px 2px 15px grey;
+        }
+      }
+      section:first-child {
+        margin-left: 0;
+      }
+      section:nth-child(4n) {
+        margin-left: 0;
+      }
+    }
+  }
+  .article {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .title {
+      color: lightblue;
+    }
+    p {
+
+    }
+    .priceContainer {
+      color: $black;
+      transition: all 1s linear 0s;
+      //text-align: left;
+      width: 0;
+      &:hover {
+        width: 100%;
+        transition: all 1s linear 0s;
+        transform: scaleX(1);
+        background-color: lightblue;
+        text-align: right;
+      }
+    }
+  }
+}
