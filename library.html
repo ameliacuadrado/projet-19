@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" type="text/css" href="css/grid.css">-->
+    <link rel="stylesheet" type="text/css" href="css/_global.css">
+    <title>Vintage lab</title>
+</head>
+<body id="library">
+<!-- Le header se retrouve sur toute les pages -->
+<header>
+    <!-- Première section: row qui contient le logo et la zone de recherche-->
+    <section class="content col-sm-12 alignContent">
+        <div class="col-lg-6 col-md-6">
+            <img src="img/content/logo.png" class="logo"/>
+        </div>
+        <div class="col-lg-6 col-md-6 search">
+            <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
+            <input class="btnSearch" type="submit" name="submit" value="OK">
+        </div>
+
+    </section>
+    <hr/>
+    <!-- Première barre de navigation: menu principal. Pas utilisé de grille car uniquement 5 items et donc pas compatible avec une grille de 12
+     SCSS mis à part _navigation.scss-->
+    <nav class="mainNav content col-sm-12">
+        <a href="#" >Accueil</a>
+        <a href="#" >Meubles</a>
+        <a href="#" >Luminaires</a>
+        <a href="#" >Accessoires</a>
+        <a href="#" >Contact</a>
+    </nav>
+    <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
+    <section class="breadcrumb">
+        <div class="content">
+            <p>Vous êtes ici: <a href="#">Chaises</a></p>
+
+        </div>
+    </section>
+</header>
+
+<main class="content col-sm-12">
+    <!--Navigation verticale: ne se trouve que sur la page catalogue  -->
+    <nav class="leftNav col-lg-3 col-md-3">
+        <p><a href="#">Chaises</a></p>
+        <hr/>
+        <ul class="md-hidden lg-hidden">
+            <li><a href="#">Cuisine</a></li>
+            <li><a href="#">Salle à manger</a></li>
+        </ul>
+        <p><a href="#">Tables</a></p>
+        <hr/>
+        <ul class="md-hidden lg-hidden">
+            <li><a href="#">Basse</a></li>
+            <li><a href="#">Haute</a></li>
+            <li><a href="#">Chevet</a></li>
+            <li><a href="#">Desserte</a></li>
+        </ul>
+        <p><a href="#">Armoires</a></p>
+        <hr/>
+    </nav>
+    <!--Section qui contient les vignettes-->
+    <section class="content col-lg-9 col-md-9 col-sm-12">
+        <section class="col-lg-4 col-md-4">
+            <a href="" class="article">
+                <img src="img/content/CHR-59.jpg" alt="" class="md-hidden lg-hidden">
+                <p class="title">Bombay</p>
+                <p>Chaise de bar industrielle Bombay. Le siège en cuir n'est pas complètement fini donnant un look </p>
+                <div class="priceContainer">
+                    <p class="price">40€</p>
+                </div>
+            </a>
+        </section>
+        <section class="col-lg-4 col-md-4">
+            <a href="" class="article">
+                <img src="" alt="">
+                <p class="title">Chaise belle</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aspernatur at, aut autem eveniet
+                    exercitationem, expedita inventore </p>
+                <div class="priceContainer">
+                    <p class="price">50€</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="col-lg-4 col-md-4">
+            <a href="" class="article"><img src="" alt="">
+                <p class="title">Chaise belle</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aspernatur at, aut autem eveniet
+                    exercitationem, expedita inventore </p>
+                <div class="priceContainer">
+                    <p class="price">50€</p>
+                </div>
+            </a>
+        </section>
+
+        <section class="col-lg-4 col-md-4">
+            <a href="" class="article"><img src="" alt="">
+                <p class="title">Chaise belle</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aspernatur at, aut autem eveniet
+                    exercitationem, expedita inventore </p>
+                <div class="priceContainer">
+                    <p class="price">50€</p>
+                </div>
+            </a>
+        </section>
+        <section class="col-lg-4 col-md-4">
+            <a href="" class="article"><img src="" alt="">
+                <p class="title">Chaise belle</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet aspernatur at, aut autem eveniet
+                    exercitationem, expedita inventore </p>
+                <div class="priceContainer">
+                    <p class="price">50€</p>
+                </div>
+            </a>
+        </section>
+    </section>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
