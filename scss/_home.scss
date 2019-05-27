@@ -1,37 +1,39 @@
-#home{
-  .background{
+#home {
+  .background {
     width: 100%;
     height: auto;
     margin-top: -1rem;
   }
+  main {
+    .content {
+      margin: auto;
+      justify-content: space-around;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      section:last-child {
+        width: 50%;
+        height: auto;
 
-  .content{
-    margin: auto;
-    img{
-      width: 100%;
-      height: auto;
-    }
-    section:last-child{
-      width: 50%;
-      height: auto;
+      }
+      p {
 
-    }
-    p{
-
-      //background-color: red;
-    }
+        //background-color: red;
+      }
       ul {
         background-image: url("../img/home_page_corner.png");
         width: 50%;
         height: auto;
         background-repeat: no-repeat;
-        background-position-x:left;
+        background-position-x: left;
         background-position-y: bottom;
-      li {
+        li {
           list-style-type: none;
 
         }
       }
 
+    }
   }
 }

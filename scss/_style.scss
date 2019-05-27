@@ -1,4 +1,7 @@
 @import "partials/_colors.scss";
+
+//Commun à toutes les pages
+
 /*Extend*/
 .flex {
   display: flex;
@@ -20,6 +23,7 @@ body {
   padding: 0;
   a {
     text-decoration: none;
+    //text-transform: uppercase;
   }
 }
 
@@ -28,7 +32,6 @@ body {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  //justify-content: space-around;
 }
 
 header {
@@ -49,13 +52,17 @@ header {
       background-color: $lightblue;
     }
   }
-}
-
-main{
-  section{
-    border: 1px solid grey;
+  hr{
+    margin-bottom: 1rem;
+  }
+  nav{
+    a{
+      text-transform: uppercase;
+    }
   }
 }
+
+
 
 
 

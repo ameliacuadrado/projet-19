@@ -1,23 +1,38 @@
 @import "partials/colors";
+
 #library {
+  .priceContainer{
+    color: $white;
+  }
   main {
     .content {
-
-      section {
-        flex-basis: calc(100% / 3 * 1 - 1rem);
+      a {
+        //flex-basis: calc(100% / 3 * 1 - 1rem);
         //margin-left: 1rem;
         margin-bottom: 1rem;
-        &:hover {
-          box-shadow: 2px 2px 15px grey;
+        border: 1px solid $lightgrey;
+
+      &:hover {
+        box-shadow: 2px 2px 15px $silver;
+        .priceContainer {
+          width: 100%;
+          transition: all 1s linear 0s;
+          transform: scaleX(1);
+          background-color: lightblue;
+          text-align: right;
         }
       }
-      section:first-child {
-        margin-left: 0;
-      }
-      section:nth-child(4n) {
-        margin-left: 0;
-      }
+
+
     }
+    a:first-child {
+      margin-left: 0;
+    }
+    a:nth-child(4n) {
+      margin-left: 0;
+    }
+  }
+
   }
   .article {
     img {
@@ -25,23 +40,22 @@
       height: auto;
     }
     .title {
-      color: lightblue;
+      color: $lightblue;
+      font-size: 1.5rem;
+      margin: 5px;
+      margin-bottom: 15px;
     }
-    p {
-
+    .description {
+      margin: 5px;
+      color: $black;
     }
     .priceContainer {
-      color: $black;
+      //color: $white;
       transition: all 1s linear 0s;
       //text-align: left;
       width: 0;
-      &:hover {
-        width: 100%;
-        transition: all 1s linear 0s;
-        transform: scaleX(1);
-        background-color: lightblue;
-        text-align: right;
-      }
+
     }
+
   }
 }

@@ -1,58 +1,53 @@
-$numCol : 12;
-$gutter : 1rem;
+$numCol: 12;
+$gutter: 0;
 
-$view:(
-        sm : 480px,
-        md : 640px,
-        lg : 1024px
+$view: (
+        sm : 750px,
+        md : 1000px,
+        lg : 99999999px
 );
 
-
-@each $key, $value in $view{
-  @media screen and (min-width: $value){
-    @if($key==sm){
-      .content {
-        flex-direction: column;
-      }
-
-      .md-hidden .lg-hidden{
-        display: none;
-      }
+$tempVal: 0px;
+@each $key, $value in $view {
+  @media screen and (min-width: $tempVal) and (max-width: $value) {
+    @if ($key==sm) {
+      //Pas besoin de gouttière, chaque élément va passer à la ligne
+      $gutter: 0rem;
+    } @else {
+      $gutter: 1rem;
+      //Besoin de marge entre les vignettes
       main{
-        .content {
-          section {
-            //flex-basis: calc(100% / 3 * 3);
-            margin-left: 0rem;
-
-          }
-        }
-
-
-      }
-    }@else {
-      .content {
-        flex-direction: row;
-      }
-
-      main {
-        .content {
-          section {
-            //flex-basis: calc(100% / 3 * 3);
+        section{
+          a{
             margin-left: 1rem;
-
           }
         }
       }
+      //Pas d'espacement entre les items du menu
+      header {
+        nav {
+          a {
+
+            margin-left: 0rem;
+          }
+        }
+      }
+
     }
 
-    @for $i from 1 through $numCol{
-      .col-#{$key}-#{$i}{
+    @for $i from 1 through $numCol {
+      .col-#{$key}-#{$i} {
         flex-basis: calc(100% / #{$numCol} *
         #{$i} - #{$gutter});
       }
+    }
 
+    .#{$key}-hidden {
+      display: none;
     }
 
   }
+
+  $tempVal: $value;
 }
 
