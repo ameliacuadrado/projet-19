@@ -1,4 +1,6 @@
 @media screen and (min-width: 0px) and (max-width: 750px) {
+  header nav a {
+    flex-basis: 100%; }
   .col-sm-1 {
     flex-basis: calc(100% / 12 * 1 - 0rem); }
   .col-sm-2 {
@@ -30,6 +32,7 @@
   main section a {
     margin-left: 1rem; }
   header nav a {
+    flex-basis: calc(100% / 5);
     margin-left: 0rem; }
   .col-md-1 {
     flex-basis: calc(100% / 12 * 1 - 1rem); }
@@ -62,6 +65,7 @@
   main section a {
     margin-left: 1rem; }
   header nav a {
+    flex-basis: calc(100% / 5);
     margin-left: 0rem; }
   .col-lg-1 {
     flex-basis: calc(100% / 12 * 1 - 1rem); }
@@ -146,9 +150,6 @@ header nav a {
   #home main .content img {
     width: 100%;
     height: auto; }
-  #home main .content section:last-child {
-    width: 50%;
-    height: auto; }
   #home main .content ul {
     background-image: url("../img/home_page_corner.png");
     width: 50%;
@@ -177,10 +178,10 @@ header nav a {
     padding-bottom: 10px;
     text-decoration: none;
     color: #000000;
-    flex-basis: calc(100% / 5);
     border-bottom: transparent solid 1px; }
-    .mainNav a:hover {
-      border-bottom: 1px solid #000000; }
+
+.sm-hidden a:hover {
+  border-bottom: 1px solid #000000; }
 
 .leftNav {
   margin-right: 1rem; }
@@ -210,47 +211,56 @@ header nav a {
         .leftNav ul li a:hover {
           background-color: #AAD5DF; }
 
-#library .priceContainer {
-  color: #FFFFFF; }
-
-#library main .content a {
-  margin-bottom: 1rem;
-  border: 1px solid #DCDCDC; }
-  #library main .content a:hover {
-    box-shadow: 2px 2px 15px #C0C0C0; }
-    #library main .content a:hover .priceContainer {
+#library main .content {
+  justify-content: space-between; }
+  #library main .content .article {
+    margin-bottom: 1rem;
+    border: 1px solid #DCDCDC; }
+    #library main .content .article img {
       width: 100%;
-      transition: all 1s linear 0s;
-      transform: scaleX(1);
-      background-color: lightblue;
-      text-align: right; }
+      height: auto; }
+    #library main .content .article .title {
+      color: #AAD5DF;
+      font-size: 1.5rem;
+      margin: 5px;
+      margin-bottom: 15px; }
+    #library main .content .article .description {
+      margin: 5px;
+      color: #000000; }
+    #library main .content .article .priceContainer {
+      color: #FFFFFF; }
 
-#library main .content a:first-child {
-  margin-left: 0; }
+#library main a:hover {
+  box-shadow: 2px 2px 15px #C0C0C0; }
+  #library main a:hover .priceContainer {
+    width: 100%;
+    transition: all 1s linear 0s;
+    transform: scaleX(1);
+    background-color: #AAD5DF;
+    text-align: right; }
 
-#library main .content a:nth-child(4n) {
-  margin-left: 0; }
-
-#library .article img {
-  width: 100%;
-  height: auto; }
-
-#library .article .title {
-  color: #AAD5DF;
-  font-size: 1.5rem;
-  margin: 5px;
-  margin-bottom: 15px; }
-
-#library .article .description {
-  margin: 5px;
-  color: #000000; }
-
-#library .article .priceContainer {
+#library main a .priceContainer {
   transition: all 1s linear 0s;
   width: 0; }
+  #library main a .priceContainer p {
+    bottom: 0; }
 
-#contact main section div {
-  background-color: #AAD5DF;
-  padding-bottom: 15px; }
-  #contact main section div h2 {
-    background-color: #c8d8de; }
+#library section:nth-of-type(2) div .priceContainer {
+  text-align: right; }
+  #library section:nth-of-type(2) div .priceContainer p {
+    background: #AAD5DF; }
+
+#detail img {
+  width: 30%;
+  height: auto; }
+  #detail img:first-of-type {
+    width: 100%; }
+
+#contact main section {
+  justify-content: space-between; }
+  #contact main section div {
+    margin-bottom: 1rem;
+    background-color: #AAD5DF;
+    padding-bottom: 15px; }
+    #contact main section div h2 {
+      background-color: #c8d8de; }
