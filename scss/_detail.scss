@@ -1,0 +1,9 @@
+#detail {
+  img {
+    width: 30%;
+    height: auto;
+    &:first-of-type {
+      width: 100%;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 $numCol: 12;
 $gutter: 0;
+$itemMainNav: 5;
 
 $view: (
         sm : 750px,
@@ -8,17 +9,29 @@ $view: (
 );
 
 $tempVal: 0px;
+
 @each $key, $value in $view {
   @media screen and (min-width: $tempVal) and (max-width: $value) {
     @if ($key==sm) {
       //Pas besoin de gouttière, chaque élément va passer à la ligne
       $gutter: 0rem;
+
+      header {
+        nav {
+          a {
+            //items un en dessous de l'autre.
+            flex-basis: 100%;
+          }
+        }
+      }
+
     } @else {
       $gutter: 1rem;
+
       //Besoin de marge entre les vignettes
-      main{
-        section{
-          a{
+      main {
+        section {
+          a {
             margin-left: 1rem;
           }
         }
@@ -27,7 +40,8 @@ $tempVal: 0px;
       header {
         nav {
           a {
-
+            //calc != pour le menu principal => nbr item = 5
+            flex-basis: calc(100% / #{$itemMainNav});
             margin-left: 0rem;
           }
         }

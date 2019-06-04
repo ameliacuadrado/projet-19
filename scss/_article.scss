@@ -1,61 +1,58 @@
 @import "partials/colors";
-
+//Commun à toutes les vues
 #library {
-  .priceContainer{
-    color: $white;
-  }
   main {
     .content {
-      a {
-        //flex-basis: calc(100% / 3 * 1 - 1rem);
-        //margin-left: 1rem;
+      justify-content: space-between;
+      .article {
         margin-bottom: 1rem;
         border: 1px solid $lightgrey;
-
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .title {
+          color: $lightblue;
+          font-size: 1.5rem;
+          margin: 5px;
+          margin-bottom: 15px;
+        }
+        .description {
+          margin: 5px;
+          color: $black;
+        }
+        .priceContainer {
+          color: $white;
+        }
+      }
+    }
+    //animation vue md et lg
+    a {
       &:hover {
         box-shadow: 2px 2px 15px $silver;
         .priceContainer {
           width: 100%;
           transition: all 1s linear 0s;
           transform: scaleX(1);
-          background-color: lightblue;
+          background-color: $lightblue;
           text-align: right;
         }
       }
-
-
-    }
-    a:first-child {
-      margin-left: 0;
-    }
-    a:nth-child(4n) {
-      margin-left: 0;
+      .priceContainer {
+        transition: all 1s linear 0s;
+        width: 0;
+      }
     }
   }
-
-  }
-  .article {
-    img {
-      width: 100%;
-      height: auto;
+  //Vue sm, pas d'animation
+  section:nth-of-type(2) {
+    div {
+      .priceContainer {
+        text-align: right;
+        p {
+          background: $lightblue;
+        }
+      }
     }
-    .title {
-      color: $lightblue;
-      font-size: 1.5rem;
-      margin: 5px;
-      margin-bottom: 15px;
-    }
-    .description {
-      margin: 5px;
-      color: $black;
-    }
-    .priceContainer {
-      //color: $white;
-      transition: all 1s linear 0s;
-      //text-align: left;
-      width: 0;
-
-    }
-
   }
 }

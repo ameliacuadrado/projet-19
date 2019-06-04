@@ -1,8 +1,13 @@
 @import "partials/colors";
 #contact{
   main {
+    .margin{
+      //margin-right: 2rem;
+    }
     section{
+      justify-content: space-between;
       div{
+        margin-bottom: 1rem;
         background-color: $lightblue;
         padding-bottom: 15px;
           h2{

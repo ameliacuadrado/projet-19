@@ -1,59 +1,59 @@
 @import "partials/colors";
-$itemMainNav : 5;
-
-.mainNav{
-  //margin-top: 15px;
-  //margin-bottom: 15px;
+//Commun à toutes les vues
+.mainNav {
   text-align: center;
   margin: auto;
-
-
-  a{
+  a {
     padding-bottom: 10px;
     text-decoration: none;
     color: $black;
-    flex-basis: calc(100% / #{$itemMainNav});
     border-bottom: transparent solid 1px;
-    &:hover{
+  }
+}
+//Animation uniquement en vue lg et md
+.sm-hidden {
+  a {
+    &:hover {
       border-bottom: 1px solid $black;
     }
   }
 }
 
-.leftNav{
+//Commun à toues les vues
+.leftNav {
   margin-right: 1rem;
-  p{
+  p {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 0;
     margin-left: 0;
     padding-left: 10px;
     text-transform: uppercase;
-    &:hover{
+    &:hover {
       background-color: $lightblue;
     }
-    a{
+    a {
       color: $black;
-      &:hover{
+      &:hover {
         background-color: $lightblue;
       }
     }
   }
-  hr{
+  hr {
     color: $lightblue;
     margin-bottom: 0;
   }
-  ul{
-    list-style-type: none ;
+  ul {
+    list-style-type: none;
 
-    li{
+    li {
       margin-top: 0;
       padding-left: 25px;
-      a{
+      a {
 
         color: $black;
 
-        &:hover{
+        &:hover {
           background-color: $lightblue;
         }
       }
