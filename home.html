@@ -8,7 +8,35 @@
 <body id="home">
 <!-- Le header se retrouve sur toutes les pages -->
 <header>
-   <?php include('head.php') ?>
+    <!-- Première section: row qui contient le logo et la zone de recherche-->
+    <section class="content alignContent">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a href="home.html"> <img src="img/content/logo.png" class="logo"/></a>
+        </div>
+        <div class="col-lg-6 col-md-6 search col-sm-12">
+            <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
+            <input class="btnSearch" type="submit" name="submit" value="OK">
+        </div>
+
+    </section>
+    <hr/>
+    <!-- Première barre de navigation: menu principal. Pas utilisé de grille car uniquement 5 items et donc pas compatible avec une grille de 12
+     SCSS mis à part _navigation.scss-->
+    <nav class="mainNav content col-sm-12">
+        <a href="home.html" >Accueil</a>
+        <a href="library.html" >Meubles</a>
+        <a href="#" >Luminaires</a>
+        <a href="#" >Accessoires</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
+    <section class="breadcrumb">
+        <div class="content">
+            <p>Vous êtes ici: <a href="#">Accueil</a></p>
+
+        </div>
+    </section>
 </header>
 
 <main>
