@@ -24,21 +24,15 @@
     <!-- Première barre de navigation: menu principal. Pas utilisé de grille car uniquement 5 items et donc pas compatible avec une grille de 12
      SCSS mis à part _navigation.scss-->
     <!-- Vue md et lg-->
-    <nav class="mainNav content sm-hidden">
-        <a href="home.html" class="sm-hidden">Accueil</a>
-        <a href="library.html" class="sm-hidden">Meubles</a>
-        <a href="#" class="sm-hidden">Luminaires</a>
-        <a href="#" class="sm-hidden">Accessoires</a>
-        <a href="contact.html" class="sm-hidden">Contact</a>
+    <nav class="mainNav content ">
+        <a href="home.html" >Accueil</a>
+        <a href="library.html" >Meubles</a>
+        <a href="#">Luminaires</a>
+        <a href="#" >Accessoires</a>
+        <a href="contact.html" >Contact</a>
     </nav>
     <!-- Vue sm -->
-    <nav class="mainNav content lg-hidden md-hidden">
-    <a href="home.html" class="lg-hidden md-hidden">Accueil</a>
-    <a href="library.html" class="lg-hidden md-hidden">Meubles</a>
-    <a href="#" class="lg-hidden md-hidden">Luminaires</a>
-    <a href="#" class="lg-hidden md-hidden">Accessoires</a>
-    <a href="contact.html" class="lg-hidden md-hidden">Contact</a>
-</nav>
+
 
     <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
     <section class="breadcrumb">
@@ -72,9 +66,9 @@
     <!--Section qui contient les vignettes-->
 
     <!--Vue bureau et tablette, animations-->
-    <section class="content col-lg-9 col-md-9 sm-hidden">
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/CHR-59.jpg" alt="">
+    <section class="content col-lg-9 col-md-9 ">
+        <a href="details.html" class="article col-lg-4 col-md-4">
+            <img src="img/content/CHR-59.jpg" alt="" class="sm-hidden">
             <p class="title">Bombay</p>
             <p class="description">Chaise de bar industrielle Bombay. Le siège en cuir n'est pas complètement fini
                 donnant un look <br/> [...]</p>
@@ -83,8 +77,8 @@
             </div>
         </a>
 
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/IMG_5792_275x275.jpg" alt="" >
+        <a href="details2.html" class="article col-lg-4 col-md-4 ">
+            <img src="img/content/IMG_5792_275x275.jpg" alt="" class="sm-hidden">
             <p class="title">Kima Acier</p>
             <p class="description">Une belle chaise de fil d'acier avec un design lisse et solide. Sans pareil et un
                 vrai eye-attachant à votre table! <br/>[...] </p>
@@ -93,8 +87,8 @@
             </div>
         </a>
 
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/IMG_06579_275x275.jpg" alt="">
+        <a href="" class="article col-lg-4 col-md-4 ">
+            <img src="img/content/IMG_06579_275x275.jpg" alt="" class="sm-hidden">
             <p class="title">Peaky Blue</p>
             <p class="description">Lovely pour s'asseoir et belle à regarder! Les chaises de salle à manger, ne
                 devraient pas seulement être confortable, elles doivent aussi avoir l'air bien moderne et ajusté. <br/>[...]
@@ -104,8 +98,8 @@
             </div>
         </a>
 
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/IMG_3291_275x275.jpg" alt="">
+        <a href="" class="article col-lg-4 col-md-4 ">
+            <img src="img/content/IMG_3291_275x275.jpg" alt="" class="sm-hidden">
             <p class="title">DSW Red</p>
             <p class="description">Pour ceux qui veulent être à l'aise et à la mode; Avec le siège DSW Style, vous êtes
                 bons! Une chaise design, facile et confortable qui, sa,s vouloir attirer l'attention, s'adapte.<br/>[...]
@@ -115,19 +109,19 @@
             </div>
         </a>
 
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/IMG_5793_275x275.jpg" alt="" >
+        <a href="" class="article col-lg-4 col-md-4 ">
+            <img src="img/content/IMG_5793_275x275.jpg" alt="" class="sm-hidden">
             <p class="title">V Bar</p>
 
             <p class="description">Une belle chaise de bar en acier avec un design lisse et solide. Sans pareil et un
-                vrai eyecatcher à votre table de bar!<br/>[...]</p>
+                vrai eyecatcher à vo"tre table de bar!<br/>[...]</p>
             <div class="priceContainer">
                 <p class="price">50€</p>
             </div>
         </a>
 
-        <a href="" class="article col-lg-4 col-md-4 sm-hidden">
-            <img src="img/content/IMG_0797_275x275.jpg" alt="" >
+        <a href="" class="article col-lg-4 col-md-4 ">
+            <img src="img/content/IMG_0797_275x275.jpg" alt="" class="sm-hidden">
             <p class="title">Pezi</p>
             <p class="description">La chaise Pezi est un siège de fil trs serré et peut être utilisé dans différents
                 styles d'intérieur.<br/>[...]</p>
@@ -136,65 +130,7 @@
             </div>
         </a>
     </section>
-    <!--Vue smartphone, pas d'animation-->
-    <section class="content md-hidden lg-hidden">
-        <div class="article md-hidden lg-hidden">
-            <p class="title">Bombay</p>
-            <p class="description">Chaise de bar industrielle Bombay. Le siège en cuir n'est pas complètement fini
-                donnant un look <br/> [...]</p>
-            <div class="priceContainer">
-                <p class="price">40€</p>
-            </div>
-        </div>
 
-        <div class="article md-hidden lg-hidden">
-            <p class="title">Kima Acier</p>
-            <p class="description">Une belle chaise de fil d'acier avec un design lisse et solide. Sans pareil et un
-                vrai eye-attachant à votre table! <br/>[...] </p>
-            <div class="priceContainer">
-                <p class="price">50€</p>
-            </div>
-        </div>
-
-        <div class="article md-hidden lg-hidden">
-            <p class="title">Peaky Blue</p>
-            <p class="description">Lovely pour s'asseoir et belle à regarder! Les chaises de salle à manger, ne
-                devraient pas seulement être confortable, elles doivent aussi avoir l'air bien moderne et ajusté. <br/>[...]
-            </p>
-            <div class="priceContainer">
-                <p class="price">50€</p>
-            </div>
-        </div>
-
-        <div class="article md-hidden lg-hidden">
-            <p class="title">DSW Red</p>
-            <p class="description">Pour ceux qui veulent être à l'aise et à la mode; Avec le siège DSW Style, vous êtes
-                bons! Une chaise design, facile et confortable qui, sa,s vouloir attirer l'attention, s'adapte.<br/>[...]
-            </p>
-            <div class="priceContainer">
-                <p class="price">50€</p>
-            </div>
-        </div>
-
-        <div class="article md-hidden lg-hidden">
-            <p class="title">V Bar</p>
-
-            <p class="description">Une belle chaise de bar en acier avec un design lisse et solide. Sans pareil et un
-                vrai eyecatcher à votre table de bar!<br/>[...]</p>
-            <div class="priceContainer">
-                <p class="price">50€</p>
-            </div>
-        </div>
-
-        <div class="article md-hidden lg-hidden">
-            <p class="title">Pezi</p>
-            <p class="description">La chaise Pezi est un siège de fil trs serré et peut être utilisé dans différents
-                styles d'intérieur.<br/>[...]</p>
-            <div class="priceContainer">
-                <p class="price">50€</p>
-            </div>
-        </div>
-    </section>
 </main>
 
 <footer>
