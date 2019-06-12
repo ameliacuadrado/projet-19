@@ -1,58 +1,37 @@
 @import "partials/colors";
+@import "partials/functions";
 //Commun à toutes les vues
 #library {
   main {
     .content {
       justify-content: space-between;
       .article {
-        margin-bottom: 1rem;
+        margin-bottom: rem-calc(16);
         border: 1px solid $lightgrey;
         img {
           width: 100%;
           height: auto;
         }
+
         .title {
           color: $lightblue;
-          font-size: 1.5rem;
+          font-size: rem-calc(24);
           margin: 5px;
-          margin-bottom: 15px;
+          margin-bottom: rem-calc(15);
         }
         .description {
-          margin: 5px;
+          margin: rem-calc(5);
           color: $black;
         }
         .priceContainer {
           color: $white;
+          p{
+            text-align: right;
+          }
         }
       }
     }
-    //animation vue md et lg
-    a {
-      &:hover {
-        box-shadow: 2px 2px 15px $silver;
-        .priceContainer {
-          width: 100%;
-          transition: all 1s linear 0s;
-          transform: scaleX(1);
-          background-color: $lightblue;
-          text-align: right;
-        }
-      }
-      .priceContainer {
-        transition: all 1s linear 0s;
-        width: 0;
-      }
-    }
+
   }
-  //Vue sm, pas d'animation
-  section:nth-of-type(2) {
-    div {
-      .priceContainer {
-        text-align: right;
-        p {
-          background: $lightblue;
-        }
-      }
-    }
-  }
+
 }

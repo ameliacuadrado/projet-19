@@ -1,9 +1,29 @@
+@import "partials/colors";
 #detail {
   img {
-    width: 30%;
+    width: 20%;
     height: auto;
     &:first-of-type {
       width: 100%;
     }
+  }
+  h2{
+    color: $lightblue;
+  }
+  .priceContainer{
+    background-color:$lightblue;
+    color: $white;
+    width: 50%;
+    margin-top: rem-calc(15);
+    p {
+      padding: rem-calc(2);
+    }
+  }
+  h3{
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  p{
+    margin: 0;
   }
 }

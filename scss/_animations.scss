@@ -1,0 +1,103 @@
+@import "grid";
+@import "partials/colors";
+
+
+$tempVal: 0px;
+@each $key, $value in $view {
+  @media screen and (min-width: $tempVal) and (max-width: $value) {
+    @if ($key==sm) {
+      //Catalogue
+      a {
+        .priceContainer {
+          text-align: right;
+          p {
+            background: $lightblue;
+          }
+        }
+      }
+      //image de coin cachée en vue sm
+      #home{
+        main{
+          section:nth-of-type(2){
+            div:last-of-type{
+              background-image: none;
+
+            }
+          }
+        }
+      }
+    } @else {
+      //library
+      //animation vue md et lg
+      #library {
+        section {
+          a {
+            &:hover {
+              box-shadow: 2px 2px 15px $silver;
+              .priceContainer {
+                width: 100%;
+                transition: all 1s linear 0s;
+                transform: scaleX(1);
+                background-color: $lightblue;
+
+              }
+            }
+            .priceContainer {
+              transition: all 1s linear 0s;
+              width: 0;
+            }
+          }
+        }
+      }
+      //Animation navigation principale
+      header{
+        .mainNav{
+          a {
+            &:hover {
+              border-bottom: 1px solid $black;
+            }
+          }
+        }
+      }
+
+      //Animation navigation catalogue
+      main{
+        .leftNav{
+          p{
+            &:hover{
+              background-color: $lightblue;
+            }
+            a{
+              &:hover{
+                background-color: $lightblue;
+              }
+            }
+          }
+          ul{
+            li{
+              a{
+                &:hover{
+                  background-color: $lightblue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      //image coin HOME
+      #home{
+        main{
+          section:nth-of-type(2){
+            div:last-of-type{
+              background-image: url("../img/home_page_corner.png");
+
+            }
+          }
+        }
+      }
+    }
+  }
+  $tempVal: $value;
+}
+

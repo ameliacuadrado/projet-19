@@ -1,4 +1,5 @@
-@import "partials/_colors.scss";
+@import "partials/colors.scss";
+@import "partials/functions";
 
 //Commun à toutes les pages
 
@@ -16,20 +17,19 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: $base-font-size;
   color: $black;
   background-color: $white;
   margin: 0;
   padding: 0;
   a {
     text-decoration: none;
-    //text-transform: uppercase;
   }
 }
 
 .content {
   @extend .flex;
-  max-width: 1024px;
+  max-width: rem-calc(1024);
   margin-left: auto;
   margin-right: auto;
 }
@@ -46,14 +46,14 @@ header {
   }
   .search {
     align-self: center;
-    width: 20px;
+    width: rem-calc(20);
     height: auto;
     .btnSearch {
       background-color: $lightblue;
     }
   }
   hr{
-    margin-bottom: 1rem;
+    margin-bottom: rem-calc(16);
   }
   nav{
     a{

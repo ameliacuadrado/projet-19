@@ -1,9 +1,10 @@
 @import "partials/colors";
+@import "partials/functions";
 .breadcrumb {
   background: $lightblue;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: rem-calc(16);
+  margin-top: rem-calc(16);
   p {
     color: $white;
     margin-left: 0;

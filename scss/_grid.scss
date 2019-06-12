@@ -1,3 +1,4 @@
+@import "partials/functions";
 $numCol: 12;
 $gutter: 0;
 $itemMainNav: 5;
@@ -14,7 +15,10 @@ $tempVal: 0px;
   @media screen and (min-width: $tempVal) and (max-width: $value) {
     @if ($key==sm) {
       //Pas besoin de gouttière, chaque élément va passer à la ligne
-      $gutter: 0rem;
+      $gutter: rem-calc(0);
+      .content{
+        flex-direction: column;
+      }
 
       header {
         nav {
@@ -26,13 +30,15 @@ $tempVal: 0px;
       }
 
     } @else {
-      $gutter: 1rem;
-
-      //Besoin de marge entre les vignettes
+      $gutter: rem-calc(16);
+      .content {
+        flex-direction: row;
+      }
+        //Besoin de marge entre les vignettes
       main {
         section {
           a {
-            margin-left: 1rem;
+            margin-left: rem-calc(16);
           }
         }
       }
@@ -42,7 +48,7 @@ $tempVal: 0px;
           a {
             //calc != pour le menu principal => nbr item = 5
             flex-basis: calc(100% / #{$itemMainNav});
-            margin-left: 0rem;
+            margin-left: rem-calc(0);
           }
         }
       }

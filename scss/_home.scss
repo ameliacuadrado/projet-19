@@ -1,30 +1,51 @@
+@import "partials/colors";
+
 #home {
   .background {
     width: 100%;
     height: auto;
-    margin-top: -1rem;
+    margin-top: rem-calc(-16);
   }
   main {
     .content {
       margin: auto;
       justify-content: space-around;
+      flex-wrap: wrap-reverse;
+      width: 100%;
       img {
         width: 100%;
         height: auto;
       }
-      ul {
-        background-image: url("../img/home_page_corner.png");
-        width: 50%;
-        height: auto;
-        background-repeat: no-repeat;
-        background-position-x: left;
-        background-position-y: bottom;
-        li {
-          list-style-type: none;
+    }
+    section:nth-of-type(2) {
+      div:last-of-type {
 
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        p:first-of-type {
+          font-size: rem-calc(20);
+          font-height: bold;
+        }
+        ul {
+          width: 100%;
+          height: auto;
+          li {
+            list-style-type: none;
+          }
+        }
+        p:last-of-type {
+          text-align: right;
+          margin-right: rem-calc(20);
+          a {
+            background-color: $white;
+            border-radius: rem-calc(5);
+            padding: rem-calc(5);
+
+          }
         }
       }
-
     }
   }
 }
+
