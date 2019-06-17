@@ -5,15 +5,15 @@
     <link rel="stylesheet" type="text/css" href="css/_global.css">
     <title>Vintage lab</title>
 </head>
-<body id="detail">
+<body>
 <!-- Le header se retrouve sur toutes les pages -->
 <header>
     <!-- Première section: row qui contient le logo et la zone de recherche-->
-    <section class="content alignContent">
+    <section class="content">
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="home.html"> <img src="img/content/logo.png" class="logo"/></a>
+            <a href="home.html"> <img src="img/content/logo.png" alt="logo-vintage-lab" class="logo"/></a>
         </div>
-        <div class="col-lg-6 col-md-6 search col-sm-12">
+        <div class="col-lg-6 col-md-6 search col-sm-12 alignContent">
             <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
             <input class="btnSearch" type="submit" name="submit" value="OK">
         </div>
@@ -25,29 +25,39 @@
     <nav class="mainNav content col-sm-12">
         <a href="home.html">Accueil</a>
         <a href="library.html">Meubles</a>
-        <a href="#">Luminaires</a>
-        <a href="#">Accessoires</a>
+        <a href="fixtures.html">Luminaires</a>
+        <a href="accessories.html">Accessoires</a>
         <a href="contact.html">Contact</a>
     </nav>
 
     <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
     <section class="breadcrumb">
         <div class="content">
-            <p>Vous êtes ici: <a href="#">Chaise - Bombay</a></p>
+            <p>Vous êtes ici: <a href="library.html">Chaises </a><a href="details.html" >> Bombay</a></p>
         </div>
     </section>
 </header>
 
-<main class="content">
+<main id="detail" class="content">
     <section class="col-md-4 col-lg-4 col-sm-12"> 
-        <img src="img/content/CHR-59.jpg"/>
-        <img src="img/content/big-CHR-59-01.jpg"/>
-        <img src="img/content/big-CHR-59-03.jpg"/>
-        <img src="img/content/big-CHR-59-04.jpg"/>
+        <img src="img/content/CHR-59 (1).jpg" alt="bombay"/>
+        <img src="img/content/big-CHR-59-01.jpg" alt="bombay"/>
+        <img src="img/content/big-CHR-59-03.jpg" alt="bombay"/>
+        <img src="img/content/big-CHR-59-04.jpg" alt="bombay"/>
+        <img src="img/content/CHR-59.jpg" alt="bombay"/>
     </section>
     <section class="col-md-8 col-lg-8 col-sm-12">
-        <h2>Titre</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolore labore mollitia, officia omnis porro praesentium ratione similique tenetur veniam? Accusantium autem corporis cumque harum iusto maiores nostrum quidem ratione!</p>
+        <h1>Bombay:</h1>
+        <h2>Chaise De Bar industrielle en cuir marron</h2>
+        <p>Chaise de bar en cuir naturel vintage, pour une maison moderne. </p>
+        <div class="priceContainer">
+            <p class="price"><strong>Prix:</strong> 50€</p>
+        </div>
+        <h3>Spécifications</h3>
+        <p>Hauteur d'assise: 125cm</p>
+        <p>Hauteur: 100cm</p>
+        <p>Largeur: 70cm </p>
+        <p>Profondeur:60cm</p>
     </section>
 </main>
 
