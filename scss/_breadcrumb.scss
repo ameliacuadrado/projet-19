@@ -1,5 +1,6 @@
 @import "partials/colors";
 @import "partials/functions";
+
 .breadcrumb {
   background: $lightblue;
   text-transform: uppercase;
@@ -10,6 +11,10 @@
     margin-left: 0;
     a {
       color: $black;
+
     }
+    a:last-of-type {
+       color: $darkgrey;
+     }
   }
 }

@@ -2,48 +2,80 @@
 @import "partials/functions";
 
 #contact {
-  main {
 
-    section {
-      iframe{
-        margin-bottom: rem-calc(16);
-      }
-      justify-content: space-between;
-      div {
-        background-color: $lightblue;
-        padding-bottom: rem-calc(15);
-
-        h2 {
-          background-color: $lighterblue;
-          padding-top: rem-calc(10);
-          padding-bottom: rem-calc(10);
-          padding-left: rem-calc(5);
-          margin-top: auto;
-        }
-
-        form {
-          div {
-            text-align: right;
-            input {
-              margin-bottom: rem-calc(5);
-              height: rem-calc(40);
-              width: rem-calc(200);
-              margin-right: rem-calc(20);
-            }
-            input:nth-of-type(4){
-              height: initial;
-              margin-right: 0;
-            }
-            textarea {
-               width: 100%;
-               height: 100%;
-             }
-          }
-
-
-        }
-
-      }
+  section {
+    iframe {
+      margin-bottom: rem-calc(28);
+      width: 100%;
+      height: rem-calc(300);
+      border:0;
+      frameborder:0;
     }
+    justify-content: space-between;
+    div {
+      background-color: $lightblue;
+      padding-bottom: rem-calc(15);
+
+      .bold {
+        font-weight: bold;
+      }
+
+      h2 {
+        background-color: $lighterblue;
+        padding-top: rem-calc(10);
+        padding-bottom: rem-calc(10);
+        padding-left: rem-calc(5);
+        margin-top: auto;
+        font-size: rem-calc(24);
+      }
+
+      form {
+        div {
+          text-align: right;
+          input {
+            margin-bottom: rem-calc(5);
+            height: rem-calc(40);
+            width: rem-calc(200);
+            margin-right: rem-calc(20);
+            border-radius: rem-calc(3);
+            border: none;
+          }
+          input:nth-of-type(4) {
+            height: initial;
+            margin-right: 0;
+          }
+          label {
+            padding-right: rem-calc(5);
+          }
+          .marginNegative {
+            margin-left: rem-calc(-80);
+            padding-right: 0;
+          }
+          input[type=submit] {
+            color: $lightblue;
+            width: rem-calc(100);
+            text-transform: uppercase;
+            background-color: $white;
+            margin-top: rem-calc(10);
+
+          }
+          textarea {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+      }
+
+    }
+  }
+  section:nth-of-type(2) {
+    p {
+      padding-left: rem-calc(10);
+      padding-bottom: 0;
+      margin-bottom:rem-calc(3);
+      margin-top: rem-calc(3);
+    }
+
   }
 }

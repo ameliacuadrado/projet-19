@@ -1,12 +1,18 @@
 @import "grid";
 @import "partials/colors";
 
-
 $tempVal: 0px;
 @each $key, $value in $view {
   @media screen and (min-width: $tempVal) and (max-width: $value) {
     @if ($key==sm) {
+      header {
+        .alignContent {
+          display: flex;
+          justify-content: center;
+        }
+      }
       //Catalogue
+
       a {
         .priceContainer {
           text-align: right;
@@ -16,17 +22,30 @@ $tempVal: 0px;
         }
       }
       //image de coin cachée en vue sm
-      #home{
-        main{
-          section:nth-of-type(2){
-            div:last-of-type{
-              background-image: none;
+      #home {
+        main {
+          section {
+            section:first-of-type {
+              order: 2;
+            }
+            section:nth-of-type(2) {
+              order: 1;
+              div:last-of-type {
+                background-image: none;
 
+              }
             }
           }
+
         }
       }
     } @else {
+      header {
+        .alignContent {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
       //library
       //animation vue md et lg
       #library {
@@ -42,6 +61,9 @@ $tempVal: 0px;
 
               }
             }
+            .description {
+              height: rem-calc(130);
+            }
             .priceContainer {
               transition: all 1s linear 0s;
               width: 0;
@@ -50,8 +72,8 @@ $tempVal: 0px;
         }
       }
       //Animation navigation principale
-      header{
-        .mainNav{
+      header {
+        .mainNav {
           a {
             &:hover {
               border-bottom: 1px solid $black;
@@ -61,35 +83,36 @@ $tempVal: 0px;
       }
 
       //Animation navigation catalogue
-      main{
-        .leftNav{
-          p{
-            &:hover{
-              background-color: $lightblue;
-            }
-            a{
-              &:hover{
-                background-color: $lightblue;
+      main {
+        .leftNav {
+          ul {
+            li {
+                &:hover {
+                  background-color: $lightblue;
               }
             }
-          }
-          ul{
-            li{
-              a{
+            ul {
+              li {
                 &:hover{
-                  background-color: $lightblue;
+                  background-color: $white;
+                }
+                a {
+                  &:hover {
+                    background-color: $lightblue;
+                  }
                 }
               }
             }
+
           }
         }
       }
 
       //image coin HOME
-      #home{
-        main{
-          section:nth-of-type(2){
-            div:last-of-type{
+      #home {
+        main {
+          section:nth-of-type(2) {
+            div:last-of-type {
               background-image: url("../img/home_page_corner.png");
 
             }

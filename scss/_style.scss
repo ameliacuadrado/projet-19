@@ -22,6 +22,11 @@ body {
   background-color: $white;
   margin: 0;
   padding: 0;
+
+  h1, h2, h3{
+    font-weight: normal;
+    font-family: Open , sans-serif;
+  }
   a {
     text-decoration: none;
   }
@@ -35,9 +40,6 @@ body {
 }
 
 header {
-  .alignContent {
-    text-align: end;
-  }
   div {
     .logo {
       width: 100%;
@@ -48,8 +50,19 @@ header {
     align-self: center;
     width: rem-calc(20);
     height: auto;
+    input{
+      border-radius: rem-calc(3);
+      padding: rem-calc(8) rem-calc(12);
+      font-size: rem-calc(12);
+    }
+    input[type=text]{
+      border: 1px solid $lightgrey;
+    }
     .btnSearch {
       background-color: $lightblue;
+      border:none;
+      color: $white;
+      margin-left:rem-calc(-8);
     }
   }
   hr{

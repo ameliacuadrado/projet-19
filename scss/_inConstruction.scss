@@ -1,0 +1,17 @@
+@import "partials/colors";
+#luminaire, #accessoire{
+  div {
+    text-align: center;
+    h1 {
+      color: $lightblue;
+      margin-top: rem-calc(50);
+      font-size: rem-calc(64);
+    }
+    img{
+       width: 100%;
+       height: auto;
+       border-radius: rem-calc(5);
+     }
+  }
+
+}

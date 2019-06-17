@@ -2,36 +2,33 @@
 @import "partials/functions";
 //Commun à toutes les vues
 #library {
-  main {
-    .content {
-      justify-content: space-between;
-      .article {
-        margin-bottom: rem-calc(16);
-        border: 1px solid $lightgrey;
-        img {
-          width: 100%;
-          height: auto;
-        }
+  .content {
+    justify-content: space-between;
+    .article {
+      margin-top: rem-calc(16);
+      border: 1px solid $lightgrey;
+      img {
+        width: 100%;
+        height: auto;
+      }
 
-        .title {
-          color: $lightblue;
-          font-size: rem-calc(24);
-          margin: 5px;
-          margin-bottom: rem-calc(15);
-        }
-        .description {
-          margin: rem-calc(5);
-          color: $black;
-        }
-        .priceContainer {
-          color: $white;
-          p{
-            text-align: right;
-          }
+      .title {
+        color: $lightblue;
+        font-size: rem-calc(24);
+        margin: 5px;
+        margin-bottom: rem-calc(15);
+      }
+      .description {
+        margin: rem-calc(5);
+        color: $black;
+      }
+      .priceContainer {
+        color: $white;
+        p {
+          text-align: right;
+
         }
       }
     }
-
   }
-
 }
