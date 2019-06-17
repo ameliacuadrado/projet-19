@@ -1,4 +1,6 @@
 @media screen and (min-width: 0px) and (max-width: 750px) {
+  .content {
+    flex-direction: column; }
   header nav a {
     flex-basis: 100%; }
   .col-sm-1 {
@@ -29,6 +31,8 @@
     display: none; } }
 
 @media screen and (min-width: 750px) and (max-width: 1000px) {
+  .content {
+    flex-direction: row; }
   main section a {
     margin-left: 1rem; }
   header nav a {
@@ -62,6 +66,8 @@
     display: none; } }
 
 @media screen and (min-width: 1000px) and (max-width: 99999999px) {
+  .content {
+    flex-direction: row; }
   main section a {
     margin-left: 1rem; }
   header nav a {
@@ -94,6 +100,75 @@
   .lg-hidden {
     display: none; } }
 
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  header .alignContent {
+    display: flex;
+    justify-content: center; }
+  a .priceContainer {
+    text-align: right; }
+    a .priceContainer p {
+      background: #AAD5DF; }
+  #home main section section:first-of-type {
+    order: 2; }
+  #home main section section:nth-of-type(2) {
+    order: 1; }
+    #home main section section:nth-of-type(2) div:last-of-type {
+      background-image: none; } }
+
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+  header .alignContent {
+    display: flex;
+    justify-content: flex-end; }
+  #library section a:hover {
+    box-shadow: 2px 2px 15px #C0C0C0; }
+    #library section a:hover .priceContainer {
+      width: 100%;
+      transition: all 1s linear 0s;
+      transform: scaleX(1);
+      background-color: #AAD5DF; }
+  #library section a .description {
+    height: 8.125rem; }
+  #library section a .priceContainer {
+    transition: all 1s linear 0s;
+    width: 0; }
+  header .mainNav a:hover {
+    border-bottom: 1px solid #000000; }
+  main .leftNav ul li:hover {
+    background-color: #AAD5DF; }
+  main .leftNav ul ul li:hover {
+    background-color: #FFFFFF; }
+  main .leftNav ul ul li a:hover {
+    background-color: #AAD5DF; }
+  #home main section:nth-of-type(2) div:last-of-type {
+    background-image: url("../img/home_page_corner.png"); } }
+
+@media screen and (min-width: 1000px) and (max-width: 99999999px) {
+  header .alignContent {
+    display: flex;
+    justify-content: flex-end; }
+  #library section a:hover {
+    box-shadow: 2px 2px 15px #C0C0C0; }
+    #library section a:hover .priceContainer {
+      width: 100%;
+      transition: all 1s linear 0s;
+      transform: scaleX(1);
+      background-color: #AAD5DF; }
+  #library section a .description {
+    height: 8.125rem; }
+  #library section a .priceContainer {
+    transition: all 1s linear 0s;
+    width: 0; }
+  header .mainNav a:hover {
+    border-bottom: 1px solid #000000; }
+  main .leftNav ul li:hover {
+    background-color: #AAD5DF; }
+  main .leftNav ul ul li:hover {
+    background-color: #FFFFFF; }
+  main .leftNav ul ul li a:hover {
+    background-color: #AAD5DF; }
+  #home main section:nth-of-type(2) div:last-of-type {
+    background-image: url("../img/home_page_corner.png"); } }
+
 /*Extend*/
 .flex, .content {
   display: flex;
@@ -111,16 +186,16 @@ body {
   background-color: #FFFFFF;
   margin: 0;
   padding: 0; }
+  body h1, body h2, body h3 {
+    font-weight: normal;
+    font-family: Open , sans-serif; }
   body a {
     text-decoration: none; }
 
 .content {
-  max-width: 1024px;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto; }
-
-header .alignContent {
-  text-align: end; }
 
 header div .logo {
   width: 100%;
@@ -128,10 +203,19 @@ header div .logo {
 
 header .search {
   align-self: center;
-  width: 20px;
+  width: 1.25rem;
   height: auto; }
+  header .search input {
+    border-radius: 0.1875rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem; }
+  header .search input[type=text] {
+    border: 1px solid #DCDCDC; }
   header .search .btnSearch {
-    background-color: #AAD5DF; }
+    background-color: #AAD5DF;
+    border: none;
+    color: #FFFFFF;
+    margin-left: -0.5rem; }
 
 header hr {
   margin-bottom: 1rem; }
@@ -144,21 +228,35 @@ header nav a {
   height: auto;
   margin-top: -1rem; }
 
-#home main .content {
+#home main section .content {
   margin: auto;
-  justify-content: space-around; }
-  #home main .content img {
+  justify-content: space-around;
+  width: 100%; }
+  #home main section .content img {
     width: 100%;
-    height: auto; }
-  #home main .content ul {
-    background-image: url("../img/home_page_corner.png");
-    width: 50%;
     height: auto;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    background-position-y: bottom; }
-    #home main .content ul li {
+    margin-top: 1rem; }
+
+#home main section:nth-of-type(2) div:last-of-type {
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom right; }
+  #home main section:nth-of-type(2) div:last-of-type p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: bold; }
+  #home main section:nth-of-type(2) div:last-of-type ul {
+    width: 100%;
+    height: auto;
+    padding: 0; }
+    #home main section:nth-of-type(2) div:last-of-type ul li {
       list-style-type: none; }
+  #home main section:nth-of-type(2) div:last-of-type p:last-of-type {
+    text-align: right;
+    margin-right: 1.25rem; }
+    #home main section:nth-of-type(2) div:last-of-type p:last-of-type a {
+      background-color: #FFFFFF;
+      border-radius: 0.3125rem;
+      padding: 0.3125rem; }
 
 .breadcrumb {
   background: #AAD5DF;
@@ -170,97 +268,148 @@ header nav a {
     margin-left: 0; }
     .breadcrumb p a {
       color: #000000; }
+    .breadcrumb p a:last-of-type {
+      color: #363131; }
 
 .mainNav {
   text-align: center;
   margin: auto; }
   .mainNav a {
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     text-decoration: none;
     color: #000000;
-    border-bottom: transparent solid 1px; }
+    border-bottom: transparent solid 0.0625rem; }
 
-.sm-hidden a:hover {
-  border-bottom: 1px solid #000000; }
-
-.leftNav {
+main .leftNav {
   margin-right: 1rem; }
-  .leftNav p {
-    font-size: 16px;
+  main .leftNav ul {
+    font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 0;
+    margin-bottom: 0.3125rem;
     margin-left: 0;
-    padding-left: 10px;
-    text-transform: uppercase; }
-    .leftNav p:hover {
-      background-color: #AAD5DF; }
-    .leftNav p a {
-      color: #000000; }
-      .leftNav p a:hover {
-        background-color: #AAD5DF; }
-  .leftNav hr {
-    color: #AAD5DF;
-    margin-bottom: 0; }
-  .leftNav ul {
+    padding-left: 0.625rem;
+    text-transform: uppercase;
     list-style-type: none; }
-    .leftNav ul li {
-      margin-top: 0;
-      padding-left: 25px; }
-      .leftNav ul li a {
-        color: #000000; }
-        .leftNav ul li a:hover {
-          background-color: #AAD5DF; }
+    main .leftNav ul li a {
+      color: #000000; }
+    main .leftNav ul hr {
+      border: 0.5px solid #AAD5DF;
+      margin-top: 0; }
+    main .leftNav ul ul {
+      list-style-type: none;
+      font-weight: normal;
+      text-transform: none; }
+      main .leftNav ul ul li {
+        margin-top: 0;
+        padding-left: 1.5625rem; }
+        main .leftNav ul ul li a {
+          color: #000000; }
 
-#library main .content {
+#library .content {
   justify-content: space-between; }
-  #library main .content .article {
-    margin-bottom: 1rem;
+  #library .content .article {
+    margin-top: 1rem;
     border: 1px solid #DCDCDC; }
-    #library main .content .article img {
+    #library .content .article img {
       width: 100%;
       height: auto; }
-    #library main .content .article .title {
+    #library .content .article .title {
       color: #AAD5DF;
       font-size: 1.5rem;
       margin: 5px;
-      margin-bottom: 15px; }
-    #library main .content .article .description {
-      margin: 5px;
+      margin-bottom: 0.9375rem; }
+    #library .content .article .description {
+      margin: 0.3125rem;
       color: #000000; }
-    #library main .content .article .priceContainer {
+    #library .content .article .priceContainer {
       color: #FFFFFF; }
-
-#library main a:hover {
-  box-shadow: 2px 2px 15px #C0C0C0; }
-  #library main a:hover .priceContainer {
-    width: 100%;
-    transition: all 1s linear 0s;
-    transform: scaleX(1);
-    background-color: #AAD5DF;
-    text-align: right; }
-
-#library main a .priceContainer {
-  transition: all 1s linear 0s;
-  width: 0; }
-  #library main a .priceContainer p {
-    bottom: 0; }
-
-#library section:nth-of-type(2) div .priceContainer {
-  text-align: right; }
-  #library section:nth-of-type(2) div .priceContainer p {
-    background: #AAD5DF; }
+      #library .content .article .priceContainer p {
+        text-align: right; }
 
 #detail img {
-  width: 30%;
+  width: 20%;
   height: auto; }
   #detail img:first-of-type {
     width: 100%; }
 
-#contact main section {
+#detail h2 {
+  color: #AAD5DF; }
+
+#detail .priceContainer {
+  background-color: #AAD5DF;
+  color: #FFFFFF;
+  width: 50%;
+  margin-top: 0.9375rem; }
+  #detail .priceContainer p {
+    padding: 0.125rem; }
+
+#detail h3 {
+  font-variant: small-caps;
+  margin-bottom: 0; }
+
+#detail p {
+  margin: 0; }
+
+#contact section {
   justify-content: space-between; }
-  #contact main section div {
-    margin-bottom: 1rem;
+  #contact section iframe {
+    margin-bottom: 1.75rem;
+    width: 100%;
+    height: 18.75rem;
+    border: 0;
+    frameborder: 0; }
+  #contact section div {
     background-color: #AAD5DF;
-    padding-bottom: 15px; }
-    #contact main section div h2 {
-      background-color: #c8d8de; }
+    padding-bottom: 0.9375rem; }
+    #contact section div .bold {
+      font-weight: bold; }
+    #contact section div h2 {
+      background-color: #c8d8de;
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+      padding-left: 0.3125rem;
+      margin-top: auto;
+      font-size: 1.5rem; }
+    #contact section div form div {
+      text-align: right; }
+      #contact section div form div input {
+        margin-bottom: 0.3125rem;
+        height: 2.5rem;
+        width: 12.5rem;
+        margin-right: 1.25rem;
+        border-radius: 0.1875rem;
+        border: none; }
+      #contact section div form div input:nth-of-type(4) {
+        height: initial;
+        margin-right: 0; }
+      #contact section div form div label {
+        padding-right: 0.3125rem; }
+      #contact section div form div .marginNegative {
+        margin-left: -5rem;
+        padding-right: 0; }
+      #contact section div form div input[type=submit] {
+        color: #AAD5DF;
+        width: 6.25rem;
+        text-transform: uppercase;
+        background-color: #FFFFFF;
+        margin-top: 0.625rem; }
+      #contact section div form div textarea {
+        width: 100%;
+        height: 100%; }
+
+#contact section:nth-of-type(2) p {
+  padding-left: 0.625rem;
+  padding-bottom: 0;
+  margin-bottom: 0.1875rem;
+  margin-top: 0.1875rem; }
+
+#luminaire div, #accessoire div {
+  text-align: center; }
+  #luminaire div h1, #accessoire div h1 {
+    color: #AAD5DF;
+    margin-top: 3.125rem;
+    font-size: 4rem; }
+  #luminaire div img, #accessoire div img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3125rem; }
