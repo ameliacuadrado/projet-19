@@ -9,11 +9,11 @@
 <!-- Le header se retrouve sur toutes les pages -->
 <header>
     <!-- Première section: row qui contient le logo et la zone de recherche-->
-    <section class="content alignContent">
+    <section class="content">
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="home.html"> <img src="img/content/logo.png" class="logo"/></a>
+            <a href="home.html"> <img src="img/content/logo.png" alt="logo-vintage-lab" class="logo"/></a>
         </div>
-        <div class="col-lg-6 col-md-6 search col-sm-12">
+        <div class="col-lg-6 col-md-6 search col-sm-12 alignContent">
             <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
             <input class="btnSearch" type="submit" name="submit" value="OK">
         </div>
@@ -22,11 +22,11 @@
     <hr/>
     <!-- Première barre de navigation: menu principal. Pas utilisé de grille car uniquement 5 items et donc pas compatible avec une grille de 12
      SCSS mis à part _navigation.scss-->
-    <nav class="mainNav content col-sm-12">
+    <nav class="mainNav content">
         <a href="home.html">Accueil</a>
         <a href="library.html">Meubles</a>
-        <a href="#">Luminaires</a>
-        <a href="#">Accessoires</a>
+        <a href="fixtures.html">Luminaires</a>
+        <a href="accessories.html">Accessoires</a>
         <a href="contact.html">Contact</a>
     </nav>
 
@@ -40,26 +40,29 @@
 </header>
 
 <main>
-    <img src="img/slide.jpg" class="background sm-hidden"/>
+    <img src="img/slide.jpg" alt="slide" class="background sm-hidden"/>
 
     <section class="content">
+        <!-- Premier bloc img-->
         <section class="content col-sm-10 col-md-9 col-lg-9">
-            <div class="col-md-4 col-lg-4 sm-hidden">
-                <img src="img/liam-fr.jpg"/>
-            </div>
-            <div class="col-md-4 col-lg-4 sm-hidden">
-                <img src="img/vita-aluvia.jpg"/>
-            </div>
-            <div class="col-md-4 col-lg-4 sm-hidden">
-                <img src="img/showroom-360.jpg"/>
-            </div>
             <div class="col-md-12 col-lg-12">
-                <img src="img/gazzda.jpg"/>
+                <img src="img/gazzda.jpg" alt="gazzda"/>
             </div>
+            <div class="col-md-4 col-lg-4 sm-hidden">
+                <img src="img/liam-fr.jpg" alt="liam"/>
+            </div>
+            <div class="col-md-4 col-lg-4 sm-hidden">
+                <img src="img/vita-aluvia.jpg" alt="vita-aluvia"/>
+            </div>
+            <div class="col-md-4 col-lg-4 sm-hidden">
+                <img src="img/showroom-360.jpg" alt="showroom"/>
+            </div>
+
         </section>
+        <!--Deuxième bloc img + info-->
         <section class="content col-sm-10 col-md-3 col-lg-3">
             <div class="col-md-12 col-lg-12">
-                <img src="img/i-shop-sundays_1.jpg"/>
+                <img src="img/i-shop-sundays_1.jpg" alt="shop"/>
                 <p>
                     Ouvert chaque 1er dimanche du mois (12h-18)</p>
                 <ul>
