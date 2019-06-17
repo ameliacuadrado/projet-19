@@ -5,15 +5,15 @@
     <link rel="stylesheet" type="text/css" href="css/_global.css">
     <title>Vintage lab</title>
 </head>
-<body id="contact">
+<body >
 <!-- Le header se retrouve sur toutes les pages -->
 <header>
     <!-- Première section: row qui contient le logo et la zone de recherche-->
-    <section class="content col-sm-12 alignContent">
-        <div class="col-lg-6 col-md-6">
-            <a href="home.html"> <img src="img/content/logo.png" class="logo"/></a>
+    <section class="content">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <a href="home.html"> <img src="img/content/logo.png" alt="logo-vintage-lab" class="logo"/></a>
         </div>
-        <div class="col-lg-6 col-md-6 search">
+        <div class="col-lg-6 col-md-6 search col-sm-12 alignContent">
             <input type="text" name="Recherche" id="search" value="Que recherchez-vous ?">
             <input class="btnSearch" type="submit" name="submit" value="OK">
         </div>
@@ -25,8 +25,8 @@
     <nav class="mainNav content col-sm-12">
         <a href="home.html">Accueil</a>
         <a href="library.html">Meubles</a>
-        <a href="#">Luminaires</a>
-        <a href="#">Accessoires</a>
+        <a href="fixtures.html">Luminaires</a>
+        <a href="accessories.html">Accessoires</a>
         <a href="contact.html">Contact</a>
     </nav>
     <!--Section fil d'arianne: SCSS mis à part _breadcrumb.scss-->
@@ -38,35 +38,48 @@
     </section>
 </header>
 
-<main>
+<main id="contact">
+    <!-- Carte -->
     <section class="content">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10209.13508777947!2d5.34562!3d50.23060329999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sbe!4v1558599813691!5m2!1sfr!2sbe"
-                width="100%" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
-    <section class="content col-sm-12">
-        <div class="col-lg-4 col-md-4">
-            <h2>Info contact!</h2>
-            <p>Adresse</p>
-            <p>Email</p>
-            <p>Tel</p>
-            <p>Site</p>
-        </div>
-        <div class="col-lg-8 col-md-8">
-            <h2 class="sm-hidden">Contactez-nous!</h2>
-            <form>
-                <label>Nom</label>
-                <input type="text" name="nom" value=""/>
-                <br/>
-                <label>Prenom</label>
-                <input type="text" name="prenom" value=""/>
-                <br/>
-                <label>Email</label>
-                <input type="text" name="email" value=""/>
-                <br/>
-                <input type="checkbox" name="newsletter" value="Y"><p>Je m'inscris à la newsletter</p>
-                <input type="submit" name="valider" value="Envoyer"/>
-                <textarea name="commentaire">Un commentaire?</textarea>
 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.141537515195!2d5.558280115257834!3d50.64306247950244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0fa164d5c4969%3A0xd379a00de93c696!2sRue+St+Laurent+33%2C+4000+Li%C3%A8ge!5e0!3m2!1sfr!2sbe!4v1560793013268!5m2!1sfr!2sbe"  allowfullscreen></iframe>
+    </section>
+    <!-- Info + formulaire-->
+    <section class="content">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <h2>Info contact!</h2>
+            <p class="bold">Adresse</p>
+            <p>33 Rue Saint Laurent 4000 Liège</p>
+            <p class="bold">Email</p>
+            <p>vintage@lab.com</p>
+            <p class="bold">Tel</p>
+            <p>+32 4 223 11 31</p>
+            <p class="bold">Site</p>
+            <p>www.vlab.com</p>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <h2>Contactez-nous!</h2>
+            <form>
+                <div class="content">
+                    <div class="col-lg-6 col-md-6">
+                        <label>Nom : </label>
+                        <input type="text" name="nom" value=""/>
+                        <br/>
+                        <label>Prenom : </label>
+                        <input type="text" name="prenom" value=""/>
+                        <br/>
+                        <label>Email : </label>
+                        <input type="text" name="email" value=""/>
+                        <br/>
+
+                        <input type="checkbox" name="newsletter" value="Y"><label class="marginNegative">Je m'inscris à la newsletter</label>
+                        <br/>
+                        <input type="submit" name="valider" value="Envoyer"/>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <textarea name="commentaire">Un commentaire?</textarea>
+                    </div>
+                </div>
             </form>
         </div>
     </section>
